@@ -1,0 +1,1 @@
+/lib/systemd/system/boot.mount /etc/systemd/system/sysinit.target.wants/boot.mount

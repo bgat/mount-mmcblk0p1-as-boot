@@ -1,12 +1,18 @@
-Source: boot-mount-mmcblk0p1
-Section: unknown
+Source: mount-mmcblk0p1-as-boot
+Section: embedded
 Priority: extra
-Maintainer: Bill Gatliff <bgat@ptuxvm.billgatliff.com>
+Maintainer: Bill Gatliff <bgat@billgatliff.com>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
 
-Package: boot-mount-mmcblk0p1
+Package: mount-mmcblk0p1-as-boot
 Architecture: all
 Depends: ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Automatically mounts /dev/mmcblk0p1 at /boot
+ When the platform has a /dev/mmcblk0p1 device, we automatically
+ mount it at /boot during sysinit.
+ .
+ If your platform doesn't have a /dev/mmcblk0p1, then do NOT install
+ this package since systemd will wait for this block device to appear
+ before allowing systemd-modules-load.service to run.
+
