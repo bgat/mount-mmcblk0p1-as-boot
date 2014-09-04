@@ -2,7 +2,7 @@ Source: mount-mmcblk0p1-as-boot
 Section: embedded
 Priority: extra
 Maintainer: Bill Gatliff <bgat@billgatliff.com>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 8.0.0), dh-systemd
 Standards-Version: 3.9.3
 
 Package: mount-mmcblk0p1-as-boot
